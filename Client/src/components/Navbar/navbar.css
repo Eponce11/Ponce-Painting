@@ -1,0 +1,21 @@
+
+
+.navbar-container {
+  background-color: blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar-wrapper {
+  width: 100%;
+  max-width: 1172px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-nav-links {
+  display: flex;
+}
+
