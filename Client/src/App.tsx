@@ -1,4 +1,5 @@
 import './App.css'
+import './common/sass/main.scss'
 import Navbar from './components/Navbar/Navbar'
 
 function App() {
@@ -8,7 +9,6 @@ function App() {
     <div className='app'>
       <Navbar />
     </div>
-      
   )
 }
 
