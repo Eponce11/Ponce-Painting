@@ -20,5 +20,58 @@
   grid-column: full-start / full-end;
 }
 
+.brands {
+  background-color: chocolate;
+  height: 10rem;
 
+  grid-column: center-start / center-end;
+}
 
+.about-us {
+  background-color: rgb(22, 223, 55);
+  height: 50rem;
+
+  grid-column: center-start / center-end;
+}
+
+.services {
+  background-color: rgb(218, 204, 10);
+  height: 50rem;
+
+  grid-column: center-start / center-end;
+}
+
+.projects {
+  background-color: rgb(178, 20, 192);
+  height: 10rem;
+
+  grid-column: center-start / center-end;
+}
+
+.ceo {
+  background-color: rgb(146, 16, 70);
+  height: 10rem;
+
+  grid-column: center-start / center-end;
+}
+
+.testimonials {
+  background-color: rgb(149, 173, 12);
+  height: 10rem;
+
+  grid-column: center-start / center-end;
+}
+
+.contact {
+  background-color: rgb(15, 143, 175);
+  height: 10rem;
+
+  grid-column: center-start / center-end;
+}
+
+.footer {
+  background-color: rgb(8, 43, 44);
+  height: 10rem;
+
+  grid-column: full-start / full-end;
+}
