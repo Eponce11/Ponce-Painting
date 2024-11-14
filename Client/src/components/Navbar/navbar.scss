@@ -1,5 +1,36 @@
 @import "../../common//sass/abstracts/variables";
 
 .nav {
-  color: $color-primary;
+  background-color: aqua;
+
+  display: grid;
+  grid-template-columns: min-content 1fr max-content;
+  column-gap: 4rem;
+
+
+  &__logo {
+    width: 7.2rem;
+    height: 6rem;
+    background-color: red;
+  }
+
+  &__list {
+    list-style: none;
+    font-size: 1.6rem;
+    align-items: center;
+
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: repeat(auto-fit, max-content);
+    justify-content: end;
+    column-gap: 2.8rem;
+
+    &__item {
+      
+    }
+  }
+}
+
+.btn--1 {
+  padding: 1.6rem 4rem;
 }
