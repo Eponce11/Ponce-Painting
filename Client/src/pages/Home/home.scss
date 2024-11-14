@@ -2,6 +2,7 @@
   display: grid;
   grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(12, [col-start] minmax(min-content, 10rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
   // grid-template-rows: 10rem min-content min-content ;
+  background-color: #FEFEFE;
 
   & > * {
     font-size: 4rem;
@@ -35,8 +36,7 @@
 }
 
 .services {
-  background-color: rgb(218, 204, 10);
-  height: 50rem;
+  // background-color: rgb(218, 204, 10);
 
   grid-column: center-start / center-end;
 }
