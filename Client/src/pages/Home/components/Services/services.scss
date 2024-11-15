@@ -5,6 +5,26 @@
   column-gap: 3rem;
   row-gap: 2rem;
 
+  &__heading {
+    font-size: 4.4rem;
+    font-weight: 600;
+    line-height: 1.3;
+    text-transform: capitalize;
+    color: #000a1c;
+  }
+
+  &__btn {
+    padding: 1.6rem 3.6rem;
+    border: none;
+    border-radius: 0.5rem;
+    color: #fafafa;
+    background-color: #ff8215;
+    justify-self: end;
+    align-self: end;
+    font-size: 1.6rem;
+    font-weight: 500;
+  }
+
   &__text {
     font-size: 1.6rem;
     font-weight: 400;
@@ -24,7 +44,7 @@
 
 .service {
   padding: 2.4rem;
-  background-color: #F8F8F8;
+  background-color: #f8f8f8;
   border-radius: 1rem;
 
   display: grid;
@@ -33,10 +53,10 @@
   &__icon {
     height: 3.6rem;
     width: 3.6rem;
-    background-color: #AAB6FF;
-    
+    background-color: #aab6ff;
+
     & > * {
-      transform: translate(.7rem, .4rem);
+      transform: translate(0.7rem, 0.4rem);
     }
   }
 
@@ -58,27 +78,7 @@
 
   &__link {
     color: #ff8215;
-    font-size: 16px;
+    font-size: 1.6rem;
     font-weight: 500;
   }
-}
-
-.heading-2 {
-  font-size: 4.4rem;
-  font-weight: 600;
-  line-height: 1.3;
-  text-transform: capitalize;
-  color: #000a1c;
-}
-
-.btn-primary {
-  padding: 1.6rem 3.6rem;
-  border: none;
-  border-radius: 0.5rem;
-  color: #fafafa;
-  background-color: #ff8215;
-  justify-self: end;
-  align-self: end;
-  font-size: 1.6rem;
-  font-weight: 500;
 }
