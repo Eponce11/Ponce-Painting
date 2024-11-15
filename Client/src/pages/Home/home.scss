@@ -41,10 +41,9 @@
 }
 
 .projects {
-  background-color: rgb(178, 20, 192);
-  height: 10rem;
-
-  grid-column: center-start / center-end;
+  background-color: #FFF8F3;
+  
+  grid-column: full-start / full-end;
 }
 
 .ceo {

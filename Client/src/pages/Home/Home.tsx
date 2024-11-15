@@ -1,6 +1,7 @@
 import "./home.scss";
 
 import Services from "./components/Services/Services";
+import Projects from "../../components/Projects/Projects";
 import Navbar from "../../components/Navbar/Navbar";
 
 const Home = () => {
@@ -10,7 +11,7 @@ const Home = () => {
     <div className="brands">Brands</div>
     <div className="about-us">About Us</div>
     <Services />
-    <div className="projects">Projects</div>
+    <Projects />
     <div className="ceo">CEO</div>
     <div className="testimonials">Testimonials</div>
     <div className="contact">Contact</div>

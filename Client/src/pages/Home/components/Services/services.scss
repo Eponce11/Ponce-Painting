@@ -1,7 +1,6 @@
 .services {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(auto-fit, min-content);
   column-gap: 3rem;
   row-gap: 2rem;
   padding: 13rem 0;
@@ -40,6 +39,7 @@
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
     column-gap: 3rem;
     row-gap: 2rem;
+    margin-top: 2rem;
   }
 }
 
