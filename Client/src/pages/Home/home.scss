@@ -36,8 +36,6 @@
 }
 
 .services {
-  // background-color: rgb(218, 204, 10);
-
   grid-column: center-start / center-end;
 }
 
@@ -52,10 +50,7 @@
 }
 
 .testimonials {
-  background-color: rgb(149, 173, 12);
-  height: 10rem;
-
-  grid-column: center-start / center-end;
+  grid-column: full-start / full-end;
 }
 
 .contact {
