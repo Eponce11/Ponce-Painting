@@ -1,31 +1,20 @@
-// import "./navbar.scss";
+import "./navbar.scss";
+import { logo, links, btn_text } from "./constants";
 
 const Navbar = () => {
   return (
     <nav className="nav">
-      <div className="nav__logo"></div>
+      <img src={logo} alt="Logo" className="nav__logo" />
       <ul className="nav__list">
-        <li className="list__item">Home</li>
-        <li className="list__item">About Us</li>
-        <li className="list__item">Services</li>
-        <li className="list__item">Projects</li>
+        {links.map((link, idx) => (
+          <li className="list__item" key={idx}>
+            {link}
+          </li>
+        ))}
       </ul>
-      <button className="btn--1">Get a Quote</button>
+      <button className="nav__btn">{btn_text}</button>
     </nav>
   );
 };
 
 export default Navbar;
-
-/*
-<div className="nav__wrapper">
-        <div className="logo"></div>
-        <ul className="nav__list">
-          <li className="list__item">Home</li>
-          <li className="list__item">About Us</li>
-          <li className="list__item">Services</li>
-          <li className="list__item">Projects</li>
-        </ul>
-        <button className="btn--1">Get a Quote</button>
-      </div>
-*/
