@@ -55,14 +55,11 @@
 
 .contact {
   background-color: rgb(15, 143, 175);
-  height: 10rem;
+  height: 40rem;
 
   grid-column: center-start / center-end;
 }
 
 .footer {
-  background-color: rgb(8, 43, 44);
-  height: 10rem;
-
   grid-column: full-start / full-end;
 }
