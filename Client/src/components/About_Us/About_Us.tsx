@@ -6,8 +6,8 @@ const About_Us = () => {
     <section className="about-us">
       <div className="about-us__wrapper">
         <div className="about-us__img-block">
-          <img src={photo_1} alt="Photo 1" className="img-block__photo--1" />
-          <img src={photo_2} alt="Photo 2" className="img-block__photo--2" />
+            <img src={photo_1} alt="Photo 1" className="img-block__photo--1" />
+            <img src={photo_2} alt="Photo 2" className="img-block__photo--2" />
         </div>
         <div className="about-us__info-block">
           <h2 className="info-block__heading">{heading}</h2>
