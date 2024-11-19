@@ -51,10 +51,7 @@
 }
 
 .contact {
-  background-color: rgb(15, 143, 175);
-  height: 40rem;
-
-  grid-column: center-start / center-end;
+  grid-column: col-start 2 / col-end 11;
 }
 
 .footer {

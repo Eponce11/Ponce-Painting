@@ -6,6 +6,7 @@ import Services from "./components/Services/Services";
 import Projects from "../../components/Projects/Projects";
 import CEO from "../../components/CEO/CEO";
 import Testimonials from "../../components/Testimonials/Testimonials";
+import Contact from "../../components/Contact/Contact";
 import Footer from "../../components/Footer/Footer";
 
 const Home = () => {
@@ -19,7 +20,7 @@ const Home = () => {
       <Projects />
       <CEO />
       <Testimonials />
-      <div className="contact">Contact</div>
+      <Contact />
       <Footer />
     </div>
   );
