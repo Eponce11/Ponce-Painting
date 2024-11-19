@@ -1,6 +1,7 @@
 import "./home.scss";
 
 import Navbar from "../../components/Navbar/Navbar";
+import Brands from "./components/Brands/Brands";
 import About_Us from "../../components/About_Us/About_Us";
 import Services from "./components/Services/Services";
 import Projects from "../../components/Projects/Projects";
@@ -14,7 +15,7 @@ const Home = () => {
     <div className="container">
       <Navbar />
       <div className="hero">Hero</div>
-      <div className="brands">Brands</div>
+      <Brands />
       <About_Us />
       <Services />
       <Projects />
