@@ -1,6 +1,7 @@
 import "./home.scss";
 
 import Navbar from "../../components/Navbar/Navbar";
+import Hero from "./components/Hero/Hero";
 import Brands from "./components/Brands/Brands";
 import About_Us from "../../components/About_Us/About_Us";
 import Services from "./components/Services/Services";
@@ -14,7 +15,7 @@ const Home = () => {
   return (
     <div className="container">
       <Navbar />
-      <div className="hero">Hero</div>
+      <Hero />
       <Brands />
       <About_Us />
       <Services />
