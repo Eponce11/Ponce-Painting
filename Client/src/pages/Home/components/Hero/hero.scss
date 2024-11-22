@@ -10,6 +10,7 @@
 
   &__photo-block {
     grid-column: 8 / -1;
+    position: relative;
   }
 }
 
@@ -80,12 +81,22 @@
       clip-path: polygon(0 30%, 30% 0, 100% 0, 100% 100%, 0 100%);
 
       border: 4px solid #fefefe;
+
+      position: absolute;
+      z-index: 5;
+      top: 36%;
+      left: 4rem;
     }
     &--2 {
       height: 45rem;
       width: 40.5rem;
       object-fit: cover;
       clip-path: polygon(0 20%, 20% 0, 100% 0, 100% 100%, 0 100%);
+      position: absolute;
+
+      top: 10%;
+      right: -6rem;
+
     }
   }
 }
