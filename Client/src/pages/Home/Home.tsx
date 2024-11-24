@@ -14,7 +14,6 @@ import Footer from "../../components/Footer/Footer";
 const Home = () => {
   return (
     <div className="container">
-      
       <Footer />
     </div>
   );
