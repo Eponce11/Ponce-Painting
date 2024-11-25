@@ -7,6 +7,10 @@
   row-gap: 2rem;
   padding: 13rem 0;
 
+  @include respond(tab-port) {
+    padding: 3rem 0;
+  }
+
   @include respond(phone) {
     grid-template-columns: 1fr;
   }
@@ -19,11 +23,13 @@
     color: #000a1c;
 
     @include respond(tab-port) {
-      font-size: 4rem;
+      font-size: 3rem;
     }
     
     @include respond(phone) {
       font-size: 2.2rem;
+      width: 85%;
+      justify-self: center;
       text-align: center;
     }
   }
@@ -66,6 +72,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
     row-gap: 2rem;
+    column-gap: 3rem;
     margin-top: 2rem;
 
     @include respond(phone) {
