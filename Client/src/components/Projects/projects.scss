@@ -56,7 +56,7 @@
     color: #595959;
     grid-column: 1;
 
-    @include respond(phone) {
+    @include respond(tab-land) {
       font-size: 1.4rem;
     }
   }
