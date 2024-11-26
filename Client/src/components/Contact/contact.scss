@@ -1,10 +1,19 @@
+@import "../../common/sass/abstracts/mixins";
+
 .contact {
   display: grid;
-  grid-template-columns: 39rem 1fr;
+  grid-template-columns: minmax(1rem, 39rem) 1fr;
   grid-template-rows: repeat(2, min-content);
   row-gap: 3.6rem;
   column-gap: 8rem;
   padding: 13rem 3rem;
+
+  @include respond(phone) {
+    grid-template-columns: 1fr;
+    grid-row: auto;
+    row-gap: 1.6rem;
+    padding: 3rem 0;
+  }
 
   &__img {
     grid-row: 1 / -1;
@@ -12,6 +21,11 @@
     max-width: 100%;
     object-fit: cover;
     border-radius: 1rem;
+
+    @include respond(phone) {
+      grid-row: -1;
+      margin-top: 2rem;
+    }
   }
 
   &__heading {
@@ -20,14 +34,21 @@
     line-height: 1.3;
     text-transform: capitalize;
     color: #000a1c;
+
+    @include respond(phone) {
+      font-size: 2.2rem;
+    }
   }
 
   &__form {
-    grid-column: 2;
-
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1.6rem;
+
+    @include respond(phone) {
+      gap: 1.1rem;
+      grid-template-columns: 1fr;
+    }
   }
 }
 
@@ -50,6 +71,10 @@
     line-height: 1.3;
     text-transform: capitalize;
     color: #000a1c;
+
+    @include respond(phone) {
+      font-size: 1.4rem;
+    }
   }
 
   &__input,
@@ -65,6 +90,10 @@
       font-weight: 400;
       line-height: 1.3;
       color: #8b8b8b;
+
+      @include respond(phone) {
+        font-size: 1rem;
+      }
     }
   }
 
@@ -83,5 +112,10 @@
     background-color: #ff8215;
     font-size: 1.6rem;
     font-weight: 500;
+
+    @include respond(phone) {
+      font-size: 1.2rem;
+      padding: 1.2rem 0;
+    }
   }
 }
