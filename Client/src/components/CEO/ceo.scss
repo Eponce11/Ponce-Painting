@@ -1,11 +1,24 @@
+@import "../../common/sass/abstracts/mixins";
+
 .ceo {
   display: grid;
-  grid-template-columns: 1fr min-content;
+  grid-template-columns: 1fr min-content(35rem, 37rem);
   grid-template-rows: 1fr repeat(3, min-content) 1fr;
   column-gap: 8rem;
   row-gap: 2rem;
 
   padding: 13rem 0;
+
+  @include respond(tab-land) {
+    column-gap: 4rem;
+  }
+
+  @include respond(tab-port) {
+    column-gap: 4rem;
+    grid-template-rows: repeat(4, min-content);
+    text-align: center;
+    padding: 3rem 0;
+  }
 
   &__heading {
     grid-row: 2;
@@ -15,6 +28,15 @@
     line-height: 1.3;
     text-transform: capitalize;
     color: #000a1c;
+
+    @include respond(tab-port) {
+      font-size: 3rem;
+      grid-row: 1;
+    }
+
+    @include respond(phone) {
+      font-size: 2.2rem;
+    }
   }
 
   &__btn {
@@ -29,6 +51,12 @@
     font-size: 1.6rem;
     font-weight: 500;
     margin-top: 2rem;
+
+    @include respond(tab-port) {
+      grid-row: 3;
+      margin: 0;
+      justify-self: center;
+    }
   }
 
   &__text {
@@ -38,15 +66,31 @@
     font-weight: 400;
     line-height: 1.5;
     color: #595959;
+
+    @include respond(tab-port) {
+      font-size: 1.5rem;
+      grid-row: 2;
+    }
+
+    @include respond(phone) {
+      font-size: 1.4rem;
+    }
   }
 
   &__img {
     grid-column: 2;
     grid-row: 1 / -1;
 
-    width: 37rem;
+    width: 100%;
     height: 46rem;
     border-radius: 1rem;
     object-fit: cover;
+
+    @include respond(tab-port) {
+      grid-column: auto;
+      grid-row: 4;
+      max-width: 33rem;
+      justify-self: center;
+    }
   }
 }

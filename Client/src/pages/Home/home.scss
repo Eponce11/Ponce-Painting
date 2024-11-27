@@ -48,6 +48,9 @@
 
 .ceo {
   grid-column: col-start 2 / col-end 11;
+  @include respond(tab-land) {
+    grid-column: center-start / center-end;
+  }
 }
 
 .testimonials {
