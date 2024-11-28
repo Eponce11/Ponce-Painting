@@ -1,3 +1,5 @@
+@import "../../common/sass/abstracts/mixins";
+
 .about-us {
   display: grid;
   grid-template-columns: minmax(6rem, 1fr) minmax(min-content, 120rem) minmax(
@@ -7,11 +9,31 @@
 
   background-color: #fff8f3;
   padding: 13rem 0;
+
+  @include respond(tab-port) {
+    padding: 8rem 0;
+  }
+
+  @include respond(phone) {
+    padding: 3rem 0;
+    grid-template-columns: 1rem minmax(min-content, 120rem) 1rem;
+  }
+
   &__wrapper {
     grid-column: 2;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr 1fr;
     column-gap: 8rem;
+
+    @include respond(tab-land) {
+      column-gap: 2.5rem;
+    }
+
+    @include respond(tab-port) {
+      grid-template-columns: 1fr;
+      text-align: center;
+      justify-items: center;
+    }
   }
 
   &__img-block {
@@ -19,10 +41,12 @@
     grid-template-columns: repeat(2, 1fr);
     column-gap: 2rem;
     position: relative;
+
     &::before {
       content: "";
       top: 0;
-      right: 25%;
+      right: 50%;
+      transform: translateX(50%);
       position: absolute;
       width: 300px;
       height: 100px;
@@ -30,11 +54,13 @@
       border-color: #000 transparent transparent transparent;
       border-radius: 100% 100% 0 0;
     }
+
     &::after {
       content: "";
       bottom: 0;
-      right: 25%;
+      right: 50%;
       position: absolute;
+      transform: translateX(50%);
       width: 300px;
       height: 100px;
       border: solid 4px #000;
@@ -48,26 +74,38 @@
     grid-template-rows: 1fr repeat(3, min-content) 1fr;
     row-gap: 2rem;
     justify-items: start;
+
+    @include respond(tab-port) {
+      grid-row: 1;
+    }
   }
 }
 
 .img-block {
   &__photo {
-    &--1 {
+    &--1,
+    &--2 {
       border-radius: 1rem;
-      width: 28rem;
+      width: 100%;
+      min-width: 19rem;
+      max-width: 25rem;
       height: 37rem;
       object-fit: cover;
       z-index: 5;
+
+      @include respond(phone) {
+        max-width: 17rem;
+        min-width: 12rem;
+        height: 25rem;
+      }
     }
 
     &--2 {
-      border-radius: 1rem;
-      width: 28rem;
-      height: 37rem;
       margin-top: 9.7rem;
-      object-fit: cover;
-      z-index: 5;
+
+      @include respond(phone) {
+        margin-top: 6rem;
+      }
     }
   }
 }
@@ -81,6 +119,14 @@
     line-height: 1.3;
     text-transform: capitalize;
     color: #000a1c;
+
+    @include respond(tab-port) {
+      font-size: 3rem;
+    }
+
+    @include respond(phone) {
+      font-size: 2.2rem;
+    }
   }
 
   &__text {
@@ -90,6 +136,14 @@
     font-weight: 400;
     line-height: 1.5;
     color: #595959;
+
+    @include respond(tab-port) {
+      font-size: 1.5rem;
+    }
+
+    @include respond(phone) {
+      font-size: 1.4rem;
+    }
   }
 
   &__btn {
@@ -102,24 +156,9 @@
     background-color: #ff8215;
     font-size: 1.6rem;
     font-weight: 500;
+
+    @include respond(tab-port) {
+      justify-self: center;
+    }
   }
 }
-
-
-/*
-
-position: relative;
-      &::before {
-        content: "";
-        top: 0.1rem;
-        right: 0;
-        position: absolute;
-        width: 300px;
-        height: 100px;
-        border: solid 3px #000;
-        border-color: #000 transparent transparent transparent;
-        border-radius: 100% 100% 0 0;
-        transform: translateX(50%);
-        z-index: 1;
-      }
-*/
