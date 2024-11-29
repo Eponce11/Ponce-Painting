@@ -1,6 +1,54 @@
+@import "../../../../common/sass/abstracts/mixins";
+
 .brands {
   display: grid;
-  justify-content: space-between;
-  grid-auto-flow: column;
-  padding: 5rem 0;
+  grid-template-columns: minmax(6rem, 1fr) min-content minmax(6rem, 1fr);
+  justify-items: center;
+
+  @include respond(phone) {
+    grid-template-columns: 1rem 1fr 1rem;
+  }
+
+  &__wrapper {
+    grid-column: 2;
+
+    display: flex;
+    gap: 3rem;
+    width: 100%;
+
+    @include respond(tab-port) {
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    @include respond(phone) {
+      flex-direction: column;
+    }
+  }
+
+  &__block {
+    &--1,
+    &--2 {
+      display: flex;
+      gap: 5rem;
+      justify-content: center;
+
+      @include respond(phone) {
+        gap: 1rem;
+      }
+    }
+
+    &--1 {
+      @include respond(phone) {
+        & > * {
+          width: 7.5rem;
+        }
+      }
+    }
+    &--2 {
+      @include respond(phone) {
+        display: none;
+      }
+    }
+  }
 }
