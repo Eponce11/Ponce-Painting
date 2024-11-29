@@ -6,6 +6,9 @@
       6rem,
       1fr
     );
+    @include respond(phone) {
+      grid-template-columns: 1rem minmax(min-content, 120rem) 1rem;
+    }
 
   &__wrapper {
     grid-column: 2;
@@ -17,7 +20,6 @@
 
     @include respond(phone) {
       grid-template-columns: 1fr;
-      text-align: center;
     }
   }
 
@@ -28,8 +30,13 @@
     text-transform: capitalize;
     color: #000a1c;
 
+    @include respond(tab-port) {
+      font-size: 3rem;
+    }
+    
     @include respond(phone) {
       font-size: 2.2rem;
+      text-align: center;
     }
   }
 
@@ -56,25 +63,38 @@
     color: #595959;
     grid-column: 1;
 
-    @include respond(tab-land) {
+    @include respond(tab-port) {
+      font-size: 1.5rem;
+    }
+
+    @include respond(phone) {
       font-size: 1.4rem;
+      text-align: center;
     }
   }
 
   &__list {
     grid-column: 1 / -1;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     column-gap: 3rem;
     row-gap: 2rem;
     margin-top: 2rem;
+
+    @include respond (tab-land) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include respond(phone) {
+      grid-template-columns: minmax(20rem, 40rem);
+    }
   }
 }
 
 .project {
   display: grid;
   grid-template-columns: 2.4rem repeat(2, 1fr) 2.4rem;
-  grid-template-rows: 26rem;
+  grid-template-rows: 27rem;
   row-gap: 0.8rem;
 
   background-color: #fefefe;
@@ -85,6 +105,7 @@
 
   &__img {
     grid-column: 1 / -1;
+    width: 100%;
     height: 100%;
     object-fit: cover;
   }
