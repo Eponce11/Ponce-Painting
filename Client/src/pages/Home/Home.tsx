@@ -14,6 +14,7 @@ import Footer from "../../components/Footer/Footer";
 const Home = () => {
   return (
     <div className="container">
+      <Navbar />
       <Brands />
       <About_Us />
       <Services />

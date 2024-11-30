@@ -1,8 +1,22 @@
+@import "../../common/sass/abstracts/mixins";
+
 .nav {
   display: grid;
-  grid-template-columns: min-content 1fr max-content;
-  padding: 3.2rem 0 2.4rem 0;
-  border-bottom: .05rem solid #DEDEDE;
+  grid-template-columns: minmax(6rem, 1fr) minmax(min-content, 120rem) minmax(
+      6rem,
+      1fr
+    );
+  border-bottom: 0.05rem solid #dedede;
+
+  &__wrapper {
+    grid-column: 2;
+
+    display: grid;
+    padding: 3.2rem 0 2.4rem 0;
+    position: relative;
+    justify-content: space-between;
+    grid-auto-flow: column;
+  }
 
   &__logo {
     width: 7.2rem;
@@ -15,13 +29,16 @@
     align-items: center;
     justify-content: center;
     column-gap: 2.8rem;
-
     list-style: none;
-    
-    & > * {
-      font-size: 1.6rem;
-      font-weight: 500;
-      color: #000A1C;
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: #000a1c;
+
+    @include respond(tab-port) {
+      position: absolute;
+      grid-template-columns: 1fr;
+      right: 0;
+      top: 10rem;
     }
   }
 
@@ -34,5 +51,20 @@
     font-size: 1.6rem;
     font-weight: 500;
     align-self: center;
+
+    @include respond(tab-port) {
+      display: none;
+    }
+  }
+
+  &__menu-icon {
+    height: 2px;
+    background-color: #000a1c;
+    width: 2rem;
+    display: none;
+
+    @include respond(tab-port) {
+      display: block;
+    }
   }
 }
