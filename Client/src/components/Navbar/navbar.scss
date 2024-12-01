@@ -8,6 +8,10 @@
     );
   border-bottom: 0.05rem solid #dedede;
 
+  @include respond(phone) {
+    grid-template-columns: 1.5rem minmax(min-content, 120rem) 1.5rem;
+  }
+
   &__wrapper {
     grid-column: 2;
 
@@ -19,8 +23,12 @@
   }
 
   &__logo {
-    width: 7.2rem;
+    width: 100%;
     height: 6rem;
+
+    @include respond(tab-port) {
+      height: 5.2rem;
+    }
   }
 
   &__list {
@@ -38,7 +46,17 @@
       position: absolute;
       grid-template-columns: 1fr;
       right: 0;
-      top: 10rem;
+      bottom: 0;
+      transform: translateY(100%);
+
+      font-size: 1.4rem;
+      border: 0.05rem solid #dedede;
+      padding: 2rem;
+      border-radius: .5rem;
+      gap: 1.5rem;
+      text-align: center;
+      background-color: #ff8215;
+      z-index: 20;
     }
   }
 
@@ -57,14 +75,46 @@
     }
   }
 
-  &__menu-icon {
+  &__mobile-btn {
+    display: none;
+    @include respond(tab-port) {
+      display: inline-block;
+    }
+  }
+
+  &__icon {
+    width: 3rem;
     height: 2px;
     background-color: #000a1c;
-    width: 2rem;
     display: none;
+    align-self: center;
+    position: relative;
 
-    @include respond(tab-port) {
-      display: block;
+    &,
+    &::before,
+    &::after {
+      width: 3rem;
+      height: 2px;
+      background-color: #000a1c;
+
+      @include respond(tab-port) {
+        display: inline-block;
+      }
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+    }
+
+    &::before {
+      top: -1rem;
+    }
+
+    &::after {
+      top: 1rem;
     }
   }
 }
