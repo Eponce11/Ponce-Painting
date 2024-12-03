@@ -5,6 +5,7 @@
   grid-template-columns: [full-start] minmax(3rem, 1fr) [center-start] repeat(12, [col-start] minmax(min-content, 7.25rem) [col-end]) [center-end] minmax(3rem, 1fr) [full-end];
   background-color: #FEFEFE;
   column-gap: 3rem;
+  overflow: hidden;
 
   & > * {
     font-size: 4rem;

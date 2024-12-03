@@ -19,6 +19,7 @@ const Home = () => {
       <About_Us />
       <Services />
       <CEO />
+      <Testimonials />
       <Contact />
       <Footer />
     </div>
