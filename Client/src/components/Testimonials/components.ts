@@ -21,7 +21,7 @@ export const testimonials = [
       img: Test,
       alt: "Photo 1",
     },
-    name: "John Smith",
+    name: "Some Name",
     role: "Manager At IHG",
   },
   {
@@ -30,7 +30,7 @@ export const testimonials = [
       img: Test,
       alt: "Photo 1",
     },
-    name: "John Smith",
+    name: "Test Ing",
     role: "Manager At IHG",
   },
 ];

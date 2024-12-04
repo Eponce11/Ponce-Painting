@@ -10,6 +10,10 @@
   background-color: #fff8f3;
   padding: 13rem 0;
 
+  @include respond (tab-port) {
+    padding: 3rem 0;
+  }
+
   @include respond(phone) {
     padding: 3rem 0;
     grid-template-columns: 1rem minmax(min-content, 120rem) 1rem;
@@ -19,7 +23,6 @@
     display: grid;
     grid-column: 2;
     grid-template-columns: 1fr minmax(min-content, 65rem) 1fr;
-    grid-template-rows: min-content min-content min-content min-content;
     row-gap: 2rem;
     justify-items: center;
   }
@@ -71,8 +74,14 @@
     display: grid;
     grid-template-columns: repeat(3, minmax(min-content, 1fr));
     column-gap: 3rem;
-    
-    margin: 3.6rem 0;
+
+    margin: 3.6rem 0 2rem 0;
+
+    @include respond(tab-land) {
+      grid-template-columns: repeat(2, 1fr);
+      justify-items: center;
+      gap: 2rem;
+    }
 
     @include respond(tab-port) {
       width: 75%;
@@ -84,15 +93,9 @@
       column-gap: 1rem;
     }
   }
-    
 }
 
 .testimonial {
-
-  @include respond(tab-port) {
-    flex: 0 0 100%;
-  }
-  
   display: grid;
   row-gap: 2.4rem;
 
@@ -103,6 +106,18 @@
 
   position: relative;
   overflow: hidden;
+
+  @include respond(tab-land) {
+    &:last-child {
+      grid-column: 1 / -1;
+      width: 50%;
+    }
+  }
+
+  @include respond(tab-port) {
+    flex: 0 0 100%;
+    transition: translate 250ms ease-in-out;
+  }
 
   &::before {
     content: "";
@@ -185,5 +200,33 @@
     @include respond(phone) {
       font-size: 1.3rem;
     }
+  }
+}
+
+.card-slider {
+  grid-column: 2;
+  gap: 2rem;
+  text-align: center;
+  display: none;
+  font-weight: 300;
+
+  @include respond(tab-port) {
+    display: flex;
+  }
+
+  &__prev-btn {
+    width: 5.4rem;
+    height: 5.4rem;
+    background-color: #e0e0e0;
+    border-radius: 100%;
+    color: #000a1c;
+  }
+
+  &__next-btn {
+    width: 5.4rem;
+    height: 5.4rem;
+    background-color: #ff8215;
+    border-radius: 100%;
+    color: #E0E0E0;
   }
 }
