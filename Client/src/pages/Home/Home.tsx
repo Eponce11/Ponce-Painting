@@ -18,6 +18,7 @@ const Home = () => {
       <Brands />
       <About_Us />
       <Services />
+      <Projects />
       <CEO />
       <Testimonials />
       <Contact />
