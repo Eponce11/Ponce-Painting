@@ -15,6 +15,7 @@ const Home = () => {
   return (
     <div className="container">
       <Navbar />
+      <Hero />
       <Brands />
       <About_Us />
       <Services />
