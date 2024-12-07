@@ -1,202 +1,85 @@
-@import "../../../../common/sass/abstracts/mixins";
-
 .hero {
+  height: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 65vh;
+  background-image: linear-gradient(
+      270deg,
+      rgba(0, 0, 0, 0.7) 0%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    url("../../../../common/imgs/project-1.png");
+
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+
   display: grid;
   grid-template-columns: minmax(6rem, 1fr) minmax(min-content, 120rem) minmax(
       6rem,
       1fr
     );
 
-  @include respond(phone) {
-    padding: 3rem 0;
-    grid-template-columns: 2rem minmax(min-content, 120rem) 2rem;
+  /* May Need to Change */
+  justify-items: end;
+  align-content: center;
+
+  & > * {
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
   }
 
   &__wrapper {
     grid-column: 2;
 
+    height: 100%;
     display: grid;
-    grid-template-columns: 3fr 2fr;
-    grid-template-rows: repeat(auto, min-content);
-    column-gap: 3rem;
+    width: 67rem;
+    grid-template-rows: repeat(3, min-content);
+    justify-items: start;
+    row-gap: 2rem;
+    padding: 4rem 0 4rem 5rem;
 
-    @include respond(tab-land) {
-      grid-template-columns: 51rem 1fr;
-      column-gap: 2rem;
-    }
-
-    @include respond(tab-port) {
-      grid-template-columns: 1fr;
-      column-gap: 0;
-    }
-  }
-
-  &__info-block {
-    display: grid;
-    grid-template-columns: 1fr;
-
-    @include respond(phone) {
-      grid-column: 1;
-    }
-  }
-
-  &__photo-block {
     position: relative;
 
-    @include respond(phone) {
-      grid-column: 1;
-    }
-  }
-}
+    &::before {
+      content: "";
+      height: 100%;
+      width: 50%;
+      position: absolute;
 
-.hero-info-block {
-  &__tag {
-    display: inline-block;
-    font-size: 1.2rem;
-    font-weight: 500;
-    color: #ff8215;
-    padding: 1rem 4rem;
-    background-color: #fcf5f2;
-    border-right: 2px solid #ff8215;
-    border-left: 2px solid #ff8215;
-    border-radius: 15px;
-
-    justify-self: start;
-
-    @include respond(phone) {
-      font-size: 1rem;
-      padding: 0.8rem 2.4rem;
+      border-top: 8px solid #fff;
+      border-bottom: 8px solid #fff;
+      border-left: 8px solid #fff;
     }
   }
 
   &__heading {
-    &--1,
-    &--2,
-    &--3 {
-      font-size: 6.4rem;
-      font-weight: 600;
-      line-height: 1.3;
-      text-transform: capitalize;
-      color: #000a1c;
-
-      @include respond(tab-land) {
-        font-size: 5.5rem;
-      }
-
-      @include respond(tab-port) {
-        font-size: 4.8rem;
-      }
-
-      @include respond(phone) {
-        font-size: 3.2rem;
-      }
-    }
-  }
-
-  &__photo-container {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-  }
-
-  &__photo {
-    width: 24rem;
-    height: 6.3rem;
-    border-radius: 10rem;
-    object-fit: cover;
-
-    @include respond(tab-land) {
-      width: 20rem;
-      height: 5.8rem;
-    }
-
-    @include respond(tab-port) {
-      width: 17rem;
-      height: 5rem;
-    }
-
-    @include respond(phone) {
-      width: 9.6rem;
-      height: 2.5rem;
-    }
+    font-size: 6.4rem;
+    text-transform: uppercase;
+    font-weight: 800;
+    line-height: 7.3rem;
+    color: #fafafa;
   }
 
   &__text {
-    font-size: 1.6rem;
-    font-weight: 400;
-    line-height: 1.5;
-    color: #595959;
-
-    margin: 1.5rem 0 2.5rem 0;
-
-    @include respond(tab-port) {
-      font-size: 1.5rem;
-    }
-
-    @include respond(phone) {
-      font-size: 1.4rem;
-    }
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 2.6rem;
+    color: #fafafa;
   }
 
   &__btn {
-    &--1 {
-      padding: 1.6rem 4rem;
-      border: none;
-      border-radius: 0.5rem;
-      color: #fafafa;
-      background-color: #ff8215;
-      font-size: 1.6rem;
-      font-weight: 500;
-
-      margin-right: 1.6rem;
-
-      @include respond(phone) {
-        font-size: 1.6rem;
-        padding: 1.4rem 3.2rem;
-      }
-    }
-
-    &--2 {
-      padding: 1.6rem 2.2rem;
-      background-color: transparent;
-      border-radius: 0.5rem;
-      border: 1px solid #ff8215;
-      font-size: 1.6rem;
-      font-weight: 500;
-      color: #353535;
-
-      @include respond(phone) {
-        font-size: 1.6rem;
-        padding: 1.4rem;
-      }
-    }
-  }
-}
-
-.hero-photo-block {
-  &__photo {
-    &--1 {
-      height: 25rem;
-      width: 24rem;
-      object-fit: cover;
-      clip-path: polygon(0 30%, 30% 0, 100% 0, 100% 100%, 0 100%);
-
-      border: 4px solid #fefefe;
-      z-index: 5;
-
-      // position: absolute;
-      top: 36%;
-      left: -2rem;
-    }
-    &--2 {
-      height: 45rem;
-      width: 40.5rem;
-      object-fit: cover;
-      clip-path: polygon(0 20%, 20% 0, 100% 0, 100% 100%, 0 100%);
-
-      //position: absolute;
-      top: 10%;
-      right: -6rem;
-    }
+    font-size: 1.6rem;
+    font-weight: 700;
+    padding: 1.6rem 3.6rem;
+    border: none;
+    border-radius: 0.5rem;
+    color: #fafafa;
+    background-color: #ff8215;
   }
 }
