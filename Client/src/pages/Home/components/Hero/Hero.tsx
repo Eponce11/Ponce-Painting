@@ -1,12 +1,11 @@
 import "./hero.scss";
-import Test from "../../../../common/imgs/project-1.png";
 
 const Hero = () => {
   return (
     <section className="hero">
       <div className="hero__wrapper">
         <h1 className="hero__heading">
-          Transforming Spaces, Elevating Experiences
+          Transforming Homes & Commercial Spaces
         </h1>
         <p className="hero__text">
           There are many variations of passages of Lorem Ipsum available, but
