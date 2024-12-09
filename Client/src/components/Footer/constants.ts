@@ -6,15 +6,42 @@ export const text = `Skyline offers a full spectrum of construction services, pr
             design`;
 export const list_1 = {
   title: "Navigation",
-  links: ["Home", "About Us", "Services", "Projects"],
+  links: [
+    {
+      label: "Home",
+      link: "#",
+    },
+    {
+      label: "About Us",
+      link: "#",
+    },
+    {
+      label: "Services",
+      link: "#",
+    },
+    {
+      label: "Projects",
+      link: "#",
+    },
+  ],
 };
 export const list_2 = {
-  title: "Partner",
-  links: ["Our Partner", "Community", "Customers"],
-};
-export const list_3 = {
-  title: "Support",
-  links: ["Contact Us", "Privacy Policy", "Terms & Conditions"],
+  title: "Contact",
+  links: ["info@poncepainting.com", "(916)-111-1111"],
 };
 
-export const company_name = "Skyline";
+export const list_3 = {
+  title: "Support",
+  links: [
+    {
+      label: "Privacy Policy",
+      link: "#",
+    },
+    {
+      label: "Terms & Conditions",
+      link: "#",
+    },
+  ],
+};
+
+export const company_name = "Ponces Painting & Wallcovering";
