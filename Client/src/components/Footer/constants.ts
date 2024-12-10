@@ -1,9 +1,7 @@
 import Logo from "../../common/imgs/ponce-painting-logo.png";
 
 export const logo = Logo;
-export const text = `Skyline offers a full spectrum of construction services, providing
-            tailored solutions for every project. From initial planning and
-            design`;
+export const text = `Ponce's Painting & Wallcovering specializes in painting and wallpaper services. We bring flexibility and precision to every project, ensuring outstanding results.`;
 export const list_1 = {
   title: "Navigation",
   links: [
@@ -27,7 +25,16 @@ export const list_1 = {
 };
 export const list_2 = {
   title: "Contact",
-  links: ["info@poncepainting.com", "(916)-111-1111"],
+  links: [
+    {
+      label: "info@poncepainting.com",
+      link: "#",
+    },
+    {
+      label: "(916)-111-1111",
+      link: "#",
+    },
+  ],
 };
 
 export const list_3 = {
