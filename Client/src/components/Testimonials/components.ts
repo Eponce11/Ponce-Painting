@@ -3,7 +3,7 @@ import Test from "../../common/imgs/project-1.png";
 export const heading =
   "Client Perspectives Real Experiences In Their Own Words";
 export const text =
-  "Skyline offers a full spectrum of construction services, providing tailored solutions for every project. From initial planning and design to execution and completion, our team";
+  "Let our clients' experiences speak for themselves, demonstrating the trust and satisfaction we strive to achieve with every project completed.";
 
 export const testimonials = [
   {

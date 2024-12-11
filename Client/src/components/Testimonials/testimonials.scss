@@ -10,8 +10,8 @@
   background-color: #fff8f3;
   padding: 13rem 0;
 
-  @include respond (tab-port) {
-    padding: 3rem 0;
+  @include respond(tab-port) {
+    padding: 6rem 0;
   }
 
   @include respond(phone) {
@@ -214,19 +214,29 @@
     display: flex;
   }
 
-  &__prev-btn {
-    width: 5.4rem;
-    height: 5.4rem;
-    background-color: #e0e0e0;
-    border-radius: 100%;
-    color: #000a1c;
-  }
-
+  &__prev-btn,
   &__next-btn {
     width: 5.4rem;
     height: 5.4rem;
-    background-color: #ff8215;
     border-radius: 100%;
-    color: #E0E0E0;
+    cursor: pointer;
+  }
+
+  &__prev-btn {
+    background-color: #e0e0e0;
+    color: #000a1c;
+
+    &:hover {
+      background-color: #d1d0d0;
+    }
+  }
+
+  &__next-btn {
+    background-color: #ff8215;
+    color: #e0e0e0;
+
+    &:hover {
+      background-color: #ff7700;
+    }
   }
 }
