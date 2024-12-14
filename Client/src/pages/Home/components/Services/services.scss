@@ -8,11 +8,12 @@
   padding: 13rem 0;
 
   @include respond(tab-port) {
-    padding: 3rem 0;
+    padding: 6rem 0;
   }
 
   @include respond(phone) {
     grid-template-columns: 1fr;
+    padding: 3rem 0;
   }
 
   &__heading {

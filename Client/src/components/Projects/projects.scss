@@ -6,9 +6,15 @@
       6rem,
       1fr
     );
+  padding: 13rem 0;
+
+  @include respond(tab-land) {
+    padding: 6rem 0;
+  }
 
   @include respond(phone) {
     grid-template-columns: 1rem minmax(min-content, 120rem) 1rem;
+    padding: 3rem 0;
   }
 
   &__wrapper {
@@ -17,7 +23,6 @@
     grid-template-columns: repeat(2, 1fr);
     column-gap: 3rem;
     row-gap: 2rem;
-    padding: 13rem 0;
 
     @include respond(tab-port) {
       grid-template-columns: 1fr;

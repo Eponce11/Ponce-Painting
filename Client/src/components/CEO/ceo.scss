@@ -17,6 +17,10 @@
     column-gap: 4rem;
     grid-template-rows: repeat(4, min-content);
     text-align: center;
+    padding: 6rem 0;
+  }
+
+  @include respond(phone) {
     padding: 3rem 0;
   }
 
