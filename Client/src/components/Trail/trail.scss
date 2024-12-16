@@ -1,0 +1,62 @@
+@import "../../common/sass/abstracts/mixins";
+
+.trail {
+  grid-column: full-start / full-end;
+
+  display: grid;
+  grid-template-columns: minmax(6rem, 1fr) minmax(min-content, 120rem) minmax(
+      6rem,
+      1fr
+    );
+  padding: 5rem 0;
+  background-color: #ff8215;
+
+  @include respond(phone) {
+    padding: 3rem 0;
+    grid-template-columns: 1rem minmax(min-content, 120rem) 1rem;
+  }
+
+  &__wrapper {
+    grid-column: 2;
+    display: grid;
+    justify-items: center;
+    gap: 1.2rem;
+  }
+
+  &__heading {
+    font-size: 4.4rem;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: 0.09rem;
+    color: #fefefe;
+
+    @include respond(tab-port) {
+      font-size: 3rem;
+    }
+    
+    @include respond(phone) {
+      font-size: 2.2rem;
+    }
+  }
+
+  &__crumbs {
+    display: flex;
+    gap: 1rem;
+  }
+
+  &__text {
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 1.4;
+    letter-spacing: 0.036rem;
+    color: #fefefe;
+
+    @include respond(tab-port) {
+      font-size: 1.7rem;
+    }
+
+    @include respond(phone) {
+      font-size: 1.6rem;
+    }
+  }
+}
