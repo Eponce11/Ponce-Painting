@@ -8,14 +8,14 @@
       6rem,
       1fr
     );
-  padding: 13rem 0;
+  padding: 13rem 0 2.5rem 0;
 
   @include respond(tab-port) {
-    padding: 6rem 0;
+    padding: 6rem 0 2.5rem 0;
   }
 
   @include respond(phone) {
-    padding: 3rem 0;
+    padding: 3rem 0 2.5rem 0;
     grid-template-columns: 1rem minmax(min-content, 120rem) 1rem;
   }
 
