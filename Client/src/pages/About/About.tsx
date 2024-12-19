@@ -1,4 +1,5 @@
 import Navbar from "../../components/Navbar/Navbar";
+import Company_Description from "./components/Company_Description/Company_Description";
 import About_Company from "./components/About_Company/About_Company";
 import Trail from "../../components/Trail/Trail";
 import CEO from "../../components/CEO/CEO";
@@ -11,6 +12,7 @@ const About = () => {
     <div className="container">
       <Navbar />
       <Trail />
+      <Company_Description />
       <About_Company />
       <CEO />
       <Testimonials />
