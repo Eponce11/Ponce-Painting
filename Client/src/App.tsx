@@ -4,6 +4,7 @@ import "./common/sass/base/_typography.scss";
 
 import Home from "./pages/Home/Home";
 import Project from "./pages/Project/Project";
+import About from "./pages/About/About";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/project" element={<Project />} />
+        <Route path="/about-us" element={<About />} />
       </Routes>
     </Router>
   );
