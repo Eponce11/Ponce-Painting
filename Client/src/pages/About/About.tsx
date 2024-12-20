@@ -13,7 +13,6 @@ const About = () => {
       <Navbar />
       <Trail />
       <Company_Description />
-      <About_Company />
       <CEO />
       <Testimonials />
       <Contact />
