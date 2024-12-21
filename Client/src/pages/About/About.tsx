@@ -1,3 +1,5 @@
+import { page_title } from "./constants";
+
 import Navbar from "../../components/Navbar/Navbar";
 import Company_Description from "./components/Company_Description/Company_Description";
 import About_Company from "./components/About_Company/About_Company";
@@ -11,7 +13,7 @@ const About = () => {
   return (
     <div className="container">
       <Navbar />
-      <Trail />
+      <Trail page_title={page_title}/>
       <Company_Description />
       <About_Company />
       <CEO />
