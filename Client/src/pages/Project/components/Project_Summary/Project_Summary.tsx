@@ -1,23 +1,29 @@
 import "./project_summary.scss";
-import Test from "../../../../common/imgs/project-1.png";
 
-const Project_Summary = () => {
+interface ProjectSummaryProps {
+  project_summary: {
+    name: string;
+    photo: {
+      img: any;
+      alt: string;
+    };
+    summary: string;
+  };
+}
+
+const Project_Summary = (props: ProjectSummaryProps) => {
+  const { name, photo, summary } = props.project_summary;
+
   return (
     <section className="project-summary">
       <div className="project-summary__wrapper">
-        <h2 className="project-summary__heading">
-          Home construction in Malibu Beach
-        </h2>
-        <img src={Test} alt="" className="project-summary__photo" />
-        <p className="project-summary__description">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-          varius enim in eros elementum tristique. Duis cursus, mi quis viverra
-          ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.
-          Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc
-          ut sem vitae risus tristique posuere. Lorem ipsum dolor sit amet,
-          consectetur adipiscing elit. Suspendisse varius enim in eros elementum
-          tristique.
-        </p>
+        <h2 className="project-summary__heading">{name}</h2>
+        <img
+          src={photo.img}
+          alt={photo.alt}
+          className="project-summary__photo"
+        />
+        <p className="project-summary__description">{summary}</p>
       </div>
     </section>
   );

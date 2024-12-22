@@ -1,6 +1,15 @@
 import "./gallery.scss";
 import Test from "../../../../common/imgs/project-1.png";
 
+interface GalleryProps {
+  photos: [
+    {
+      img: any;
+      alt: string;
+    }
+  ]
+}
+
 const Gallery = () => {
   return (
     <section className="gallery">

@@ -1,4 +1,6 @@
-import { page_title } from "./constants";
+import { page_title, projects } from "./constants";
+import { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 
 import Navbar from "../../components/Navbar/Navbar";
 import Trail from "../../components/Trail/Trail";
@@ -11,17 +13,30 @@ import Contact from "../../components/Contact/Contact";
 import Footer from "../../components/Footer/Footer";
 
 const Project = () => {
+  const [project, setProject] = useState<any>(null);
+  const { projectName } = useParams();
+
+  useEffect(() => {
+    const strProjectName = projectName?.toString();
+    if (!strProjectName || !projects.hasOwnProperty(strProjectName)) return;
+    setProject(projects[strProjectName]);
+  }, [projectName]);
+
   return (
     <div className="container">
-      <Navbar />
-      <Trail page_title={page_title} />
-      <Project_Summary />
-      <Gallery />
-      <Project_Breakdown />
-      <Projects />
-      <Testimonials />
-      <Contact />
-      <Footer />
+      {project && (
+        <>
+          <Navbar />
+          <Trail page_title={page_title} />
+          <Project_Summary project_summary={project.project_summary} />
+          <Gallery />
+          <Project_Breakdown />
+          <Projects />
+          <Testimonials />
+          <Contact />
+          <Footer />
+        </>
+      )}
     </div>
   );
 };
