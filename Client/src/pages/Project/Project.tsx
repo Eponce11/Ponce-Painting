@@ -30,7 +30,7 @@ const Project = () => {
           <Trail page_title={page_title} />
           <Project_Summary project_summary={project.project_summary} />
           <Gallery gallery={project.gallery}/>
-          <Project_Breakdown />
+          <Project_Breakdown project_breakdown={project.project_breakdown}/>
           <Projects />
           <Testimonials />
           <Contact />

@@ -57,6 +57,8 @@ export const projects: Record<string, any> = {
         "Adipiscing lorem dui justo, etiam vel neque, magna egestas aliquam donec ultrices nulla ac",
         "Adipiscing lorem dui justo, etiam vel neque, magna egestas aliquam donec ultrices nulla ac",
       ],
+      heading_3: "The Result",
+      paragraph_3: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet.`,
     },
   },
   project_2: {
@@ -113,6 +115,8 @@ export const projects: Record<string, any> = {
         "Adipiscing lorem dui justo, etiam vel neque, magna egestas aliquam donec ultrices nulla ac",
         "Adipiscing lorem dui justo, etiam vel neque, magna egestas aliquam donec ultrices nulla ac",
       ],
+      heading_3: "The Result",
+      paragraph_3: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet.`,
     },
   },
   project_3: {
@@ -169,6 +173,8 @@ export const projects: Record<string, any> = {
         "Adipiscing lorem dui justo, etiam vel neque, magna egestas aliquam donec ultrices nulla ac",
         "Adipiscing lorem dui justo, etiam vel neque, magna egestas aliquam donec ultrices nulla ac",
       ],
+      heading_3: "The Result",
+      paragraph_3: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet.`,
     },
   },
 };
