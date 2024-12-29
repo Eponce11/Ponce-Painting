@@ -3,7 +3,7 @@ import Construction_Icon from "../../common/icons/construction-icon.svg?react";
 import Project_1 from "../../common/imgs/project-1.png";
 
 export const heading = "Project Achievements That Speak for Themselves";
-export const text = "Skyline offers a full spectrum of construction services, providing tailored solutions for every project. From initial planning and design";
+export const text = "Explore our recent featured projects to see how we’ve brought exceptional painting and wallpaper solutions to life for our clients.";
 export const btn_text = "View More";
 
 export const projects = [

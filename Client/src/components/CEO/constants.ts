@@ -1,7 +1,6 @@
 import Test from "../../common/imgs/project-1.png";
 
 export const heading = "Meet The Person Steering Our Success";
-export const text =
-  "Recognize the CEO’s leadership in delivering successful projects, particularly those that have made a significant impact on the community or the industry. Mention any major landmarks, infrastructure projects, or transformative buildings that were completed under their leadership. Talk about how the CEO has cultivated a positive work environment and a strong company culture";
-export const btn_text = "About CEO";
+export const text = `Ruben Ponce, CEO of Ponce's Painting & Wallcovering, brings over 30 years of experience in the painting and wallpaper industry. His dedication to perfecting his craft has earned him a reputation for exceptional results. Under his leadership, the company has become a trusted name for commercial projects, known for quality and professionalism. Ruben ensures every project is completed with precision and care.`;
+export const btn_text = "Learn More";
 export const ceo_img = Test;
