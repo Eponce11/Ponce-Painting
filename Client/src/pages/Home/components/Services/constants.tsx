@@ -4,14 +4,14 @@ import Renovation_Icon from "../../../../common/icons/renovation-icon.svg?react"
 import Wallpaper_Painting_Icon from "../../../../common/icons/wallpaper-painting-icon.svg?react";
 
 export const heading = "From Vision To Reality Our Comprehensive Services";
-export const text = "Skyline offers a full spectrum of construction services, providing tailored solutions for every project. From initial planning and design";
+export const text = "These are our featured services, designed to provide reliable solutions that meet the needs of every client.";
 export const btn_text = "View More";
 
 export const services = [
   {
     icon: <Project_Management_Icon />,
     title: "Project Management",
-    description: "Skyline offers a full spectrum of construction services, providing tailored solutions",
+    description: "We manage projects from start to finish, ensuring everything is handled seamlessly",
     link: { 
       text: "Learn More",
       link: "#"
@@ -20,7 +20,7 @@ export const services = [
   {
     icon: <Furniture_Installation_Icon />,
     title: "Furniture Installation",
-    description: "Skyline offers a full spectrum of construction services, providing tailored solutions",
+    description: "We install and remove furniture for hotels and other commercial buildings.",
     link: { 
       text: "Learn More",
       link: "#"
@@ -29,7 +29,7 @@ export const services = [
   {
     icon: <Renovation_Icon />,
     title: "Renovation",
-    description: "Skyline offers a full spectrum of construction services, providing tailored solutions",
+    description: "We specialize in the renovation of spaces, creating refreshed and updated environments tailored to your needs.",
     link: { 
       text: "Learn More",
       link: "#"
@@ -38,7 +38,7 @@ export const services = [
   {
     icon: <Wallpaper_Painting_Icon />,
     title: "Wallpaper & Painting",
-    description: "Skyline offers a full spectrum of construction services, providing tailored solutions",
+    description: "We provide expert wallpaper removal and installation, along with professional painting services, to transform any space.",
     link: { 
       text: "Learn More",
       link: "#"
