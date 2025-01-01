@@ -26,7 +26,7 @@
     @include respond(tab-port) {
       font-size: 3rem;
     }
-    
+
     @include respond(phone) {
       font-size: 2.2rem;
       width: 85%;
@@ -36,19 +36,25 @@
   }
 
   &__btn {
-    padding: 1.6rem 3.6rem;
-    border: none;
-    border-radius: 0.5rem;
-    color: #fafafa;
-    background-color: #ff8215;
-    justify-self: end;
-    align-self: end;
-    font-size: 1.6rem;
-    font-weight: 500;
-
-    @include respond(phone) {
-      justify-self: center;
+    &:link,
+    &:visited {
+      padding: 1.6rem 3.6rem;
+      text-decoration: none;
+      border: none;
+      border-radius: 0.5rem;
+      color: #fafafa;
+      background-color: #ff8215;
+      justify-self: end;
+      align-self: end;
+      font-size: 1.6rem;
+      font-weight: 500;
+  
+      @include respond(phone) {
+        justify-self: center;
+      }
     }
+
+    
   }
 
   &__text {
@@ -117,8 +123,11 @@
   }
 
   &__link {
-    color: #ff8215;
-    font-size: 1.6rem;
-    font-weight: 500;
+    &:link,
+    &:visited {
+      color: #ff8215;
+      font-size: 1.6rem;
+      font-weight: 500;
+    }
   }
 }

@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
-  const [isDesktopNav, setIsDesktopNav] = useState<boolean>(false);
+  const [isDesktopNav, setIsDesktopNav] = useState<boolean>(true);
 
   const handleResize = () => {
     if (window.innerWidth > 900) {
