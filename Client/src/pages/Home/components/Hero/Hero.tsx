@@ -1,18 +1,15 @@
 import "./hero.scss";
+import { heading, text, btn } from "./constants";
 
 const Hero = () => {
   return (
     <section className="hero">
       <div className="hero__wrapper">
-        <h1 className="hero__heading">
-          Transforming Homes & Commercial Spaces
-        </h1>
-        <p className="hero__text">
-          There are many variations of passages of Lorem Ipsum available, but
-          the majority have suffered alteration in some form, by injected
-          humour, or randomised words which don't look even
-        </p>
-        <button className="hero__btn">Explore Our Services</button>
+        <h1 className="hero__heading">{heading}</h1>
+        <p className="hero__text">{text}</p>
+        <a href={`${btn.link}`} className="hero__btn">
+          {btn.text}
+        </a>
       </div>
     </section>
   );

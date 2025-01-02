@@ -3,7 +3,7 @@ import { services, heading, text, btn } from "./constants";
 
 const Services = () => {
   return (
-    <section className="services">
+    <section className="services" id="services">
       <h2 className="services__heading">{heading}</h2>
       <p className="services__text">{text}</p>
       <a href={`${btn.link}`} className="services__btn">

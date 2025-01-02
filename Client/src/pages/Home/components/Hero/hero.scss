@@ -6,19 +6,12 @@
   background-size: cover;
   background-image: linear-gradient(
       270deg,
-      rgba(0, 0, 0, 0.7) 0%,
-      rgba(0, 0, 0, 0) 100%
+      rgba(0, 0, 0, 0.7) 100%,
+      rgba(0, 0, 0, 0.7) 0%
     ),
     url("../../../../common/imgs/project-1.png");
 
-  -moz-transform: scaleX(-1);
-  -o-transform: scaleX(-1);
-  -webkit-transform: scaleX(-1);
-  transform: scaleX(-1);
-
   padding: 3rem 0;
-  max-height: 65vh;
-  min-height: fit-content;
 
   display: grid;
   grid-template-columns: minmax(6rem, 1fr) minmax(min-content, 120rem) minmax(
@@ -26,19 +19,10 @@
       1fr
     );
 
-  /* May Need to Change */
-  justify-items: end;
+  justify-items: start;
   align-content: center;
 
-  & > * {
-    -moz-transform: scaleX(-1);
-    -o-transform: scaleX(-1);
-    -webkit-transform: scaleX(-1);
-    transform: scaleX(-1);
-  }
-
   @include respond(phone) {
-    height: 50vh;
     grid-template-columns: 1rem minmax(min-content, 120rem) 1rem;
   }
 
@@ -55,7 +39,7 @@
 
     position: relative;
 
-    @include respond (tab-port) {
+    @include respond(tab-port) {
       width: 100%;
     }
 
@@ -68,7 +52,6 @@
       height: 100%;
       width: 45%;
       position: absolute;
-
       border-top: 8px solid #fff;
       border-bottom: 8px solid #fff;
       border-left: 8px solid #fff;
@@ -104,7 +87,7 @@
     font-weight: 500;
     line-height: 2.6rem;
     color: #fafafa;
-    
+
     @include respond(phone) {
       font-size: 1.4rem;
       font-weight: 400;
@@ -113,12 +96,17 @@
   }
 
   &__btn {
-    font-size: 1.6rem;
-    font-weight: 700;
-    padding: 1.6rem 3.6rem;
-    border: none;
-    border-radius: 0.5rem;
-    color: #fafafa;
-    background-color: #ff8215;
+    &:link,
+    &:visited {
+      text-decoration: none;
+      font-size: 1.6rem;
+      font-weight: 700;
+      padding: 1.6rem 3.6rem;
+      border: none;
+      border-radius: 0.5rem;
+      color: #fafafa;
+      background-color: #ff8215;
+      z-index: 1;
+    }
   }
 }
