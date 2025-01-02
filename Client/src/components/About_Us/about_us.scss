@@ -147,18 +147,22 @@
   }
 
   &__btn {
-    grid-row: 4;
+    &:link,
+    &:visited {
+      grid-row: 4;
 
-    padding: 1.6rem 4rem;
-    border: none;
-    border-radius: 0.5rem;
-    color: #fafafa;
-    background-color: #ff8215;
-    font-size: 1.6rem;
-    font-weight: 500;
+      padding: 1.6rem 3.6rem;
+      text-decoration: none;
+      border: none;
+      border-radius: 0.5rem;
+      color: #fafafa;
+      background-color: #ff8215;
+      font-size: 1.6rem;
+      font-weight: 500;
 
-    @include respond(tab-port) {
-      justify-self: center;
+      @include respond(tab-port) {
+        justify-self: center;
+      }
     }
   }
 }
