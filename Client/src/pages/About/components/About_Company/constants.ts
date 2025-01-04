@@ -10,11 +10,4 @@ export const photo_2 = {
   alt: "photo 2"
 }
 
-export const paragraph = `Skyline offers a full spectrum of construction services, providing
-          tailored solutions for every project. From initial planning and design
-          to execution and completion, our team Lorem ipsum dolor sit amet
-          consectetur urna sed odio id mattis donec viverra sed neque sit porta
-          mauris eros aliquet volutpat eu consequat at turpis aliquet
-          maecenas porta dignissim. Lorem ipsum dolor sit amet consectetur urna
-          sed odio id mattis donec viverra sed neque sit porta mauris eros
-          aliquet volutpat eu consequat`;
+export const paragraph = `Ponce's Painting & Wallcovering is based in Sacramento, CA, and has proudly served the Bay Area for over 20 years. Our work has taken us across the United States, completing over 100+ projects nationwide. Whether near or far, we are dedicated to delivering exceptional results with a focus on quality and professionalism. Our team takes pride in transforming spaces and meeting the unique needs of every client. We are committed to ensuring every project is completed with the highest standards of care and craftsmanship.`;

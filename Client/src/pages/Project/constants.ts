@@ -3,7 +3,7 @@ import Test from "../../common/imgs/project-1.png";
 export const page_title = "Project Details";
 
 export const projects: Record<string, any> = {
-  project_1: {
+  Malibu1: {
     project_summary: {
       name: "Home construction in Malibu Beach 1",
       photo: {
@@ -61,7 +61,7 @@ export const projects: Record<string, any> = {
       paragraph_3: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet.`,
     },
   },
-  project_2: {
+  Malibu2: {
     project_summary: {
       name: "Home construction in Malibu Beach 2",
       photo: {
@@ -119,7 +119,7 @@ export const projects: Record<string, any> = {
       paragraph_3: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet.`,
     },
   },
-  project_3: {
+  Malibu3: {
     project_summary: {
       name: "Home construction in Malibu Beach 3",
       photo: {

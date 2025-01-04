@@ -2,7 +2,6 @@ import "./projects.scss";
 import { heading, text, btn_text, projects } from "./constants";
 
 const Projects = () => {
-  
   return (
     <section className="projects">
       <div className="projects__wrapper">
@@ -14,8 +13,14 @@ const Projects = () => {
           {projects.map((project, idx) => {
             return (
               <div className="project" key={idx}>
-                <img src={project.img.img} alt={project.img.alt} className="project__img" />
-                <h4 className="project__title">{project.title}</h4>
+                <img
+                  src={project.img.img}
+                  alt={project.img.alt}
+                  className="project__img"
+                />
+                <h4 className="project__title">
+                  <a href={`project/${project.name}`}>{project.title}</a>
+                </h4>
                 <p className="project__description">{project.description}</p>
                 <div className="project__line" />
                 <p className="project__type">
