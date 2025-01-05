@@ -1,5 +1,5 @@
 import "./projects.scss";
-import { heading, text, btn_text, projects } from "./constants";
+import { heading, text, btn, projects } from "./constants";
 
 const Projects = () => {
   return (
@@ -7,7 +7,9 @@ const Projects = () => {
       <div className="projects__wrapper">
         <h2 className="projects__heading">{heading}</h2>
         <p className="projects__text">{text}</p>
-        <button className="projects__btn">{btn_text}</button>
+        <a href={`/project/${btn.link}`} className="projects__btn">
+          {btn.text}
+        </a>
 
         <div className="projects__list">
           {projects.map((project, idx) => {
@@ -19,7 +21,7 @@ const Projects = () => {
                   className="project__img"
                 />
                 <h4 className="project__title">
-                  <a href={`project/${project.name}`}>{project.title}</a>
+                  <a href={`/project/${project.name}`}>{project.title}</a>
                 </h4>
                 <p className="project__description">{project.description}</p>
                 <div className="project__line" />

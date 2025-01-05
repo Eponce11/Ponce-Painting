@@ -5,7 +5,6 @@ import Project_1 from "../../common/imgs/project-1.png";
 export const heading = "Project Achievements That Speak for Themselves";
 export const text =
   "Explore our recent featured projects to see how we’ve brought exceptional painting and wallpaper solutions to life for our clients.";
-export const btn_text = "View More";
 
 export const projects = [
   {
@@ -63,3 +62,8 @@ export const projects = [
     },
   },
 ];
+
+export const btn = {
+  text: "View More",
+  link: `${projects[0].name}`,
+};
