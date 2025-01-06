@@ -11,6 +11,8 @@
   @include respond(phone) {
     grid-template-columns: 1.5rem minmax(min-content, 120rem) 1.5rem;
   }
+  position: sticky;
+  bottom: 0;
 
   &__wrapper {
     grid-column: 2;
@@ -33,14 +35,13 @@
 
   &__list {
     display: grid;
-    grid-template-columns: repeat(4, max-content);
+    grid-template-columns: repeat(5, max-content);
     align-items: center;
     justify-content: center;
     column-gap: 2.8rem;
     list-style: none;
     font-size: 1.6rem;
     font-weight: 500;
-    color: #000a1c;
 
     @include respond(tab-port) {
       position: absolute;
@@ -52,33 +53,49 @@
       font-size: 1.4rem;
       border: 0.05rem solid #dedede;
       padding: 2rem;
-      border-radius: .5rem;
+      border-radius: 0.5rem;
       gap: 1.5rem;
       text-align: center;
-      background-color: #ff8215;
+      background-color: #fff8f3;
       z-index: 20;
     }
   }
 
-  &__btn {
-    padding: 1.6rem 4rem;
-    border: none;
-    border-radius: 0.5rem;
-    color: #fafafa;
-    background-color: #ff8215;
-    font-size: 1.6rem;
-    font-weight: 500;
-    align-self: center;
+  &__link {
+    &:link,
+    &:visited {
+      text-decoration: none;
+      color: #000a1c;
+    }
 
-    @include respond(tab-port) {
-      display: none;
+    &:hover {
+      color: #ff8215;
     }
   }
 
-  &__mobile-btn {
-    display: none;
-    @include respond(tab-port) {
-      display: inline-block;
+  &__btn {
+    &:link,
+    &:visited {
+      padding: 1.6rem 4rem;
+      border: none;
+      border-radius: 0.5rem;
+      color: #fafafa;
+      background-color: #ff8215;
+      font-size: 1.6rem;
+      font-weight: 500;
+      align-self: center;
+      text-decoration: none;
+
+      @include respond(tab-port) {
+        font-size: 1.4rem;
+        background-color: transparent;
+        color: #000a1c;
+        padding: 0;
+
+        &:hover {
+          color: #ff8215;
+        }
+      }
     }
   }
 
@@ -89,6 +106,7 @@
     display: none;
     align-self: center;
     position: relative;
+    cursor: pointer;
 
     &,
     &::before,

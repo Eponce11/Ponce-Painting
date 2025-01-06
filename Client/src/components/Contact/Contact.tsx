@@ -3,7 +3,7 @@ import Test from "../../common/imgs/project-1.png";
 
 const Contact = () => {
   return (
-    <section className="contact">
+    <section className="contact" id="contact">
       <img src={Test} alt="" className="contact__img" />
       <h2 className="contact__heading">Get A Free Quote</h2>
       <form className="contact__form">
