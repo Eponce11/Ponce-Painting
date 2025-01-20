@@ -39,7 +39,7 @@ export const list_3 = {
   links: [
     {
       label: "Privacy Policy",
-      link: "#",
+      link: "/privacy",
     },
     {
       label: "Terms & Conditions",
