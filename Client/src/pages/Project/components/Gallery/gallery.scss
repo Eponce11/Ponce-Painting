@@ -84,6 +84,7 @@
   }
 
   &__btn {
+    display: none;
     padding: 1.6rem 3.6rem;
     border: none;
     border-radius: 0.5rem;
@@ -92,5 +93,9 @@
     font-size: 1.6rem;
     font-weight: 500;
     justify-self: center;
+
+    @include respond(phone) {
+      display: block;
+    }
   }
 }
