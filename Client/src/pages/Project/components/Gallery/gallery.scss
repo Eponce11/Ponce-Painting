@@ -54,7 +54,6 @@
     border-radius: 1rem;
     object-fit: cover;
 
-
     &--4,
     &--5,
     &--6,
@@ -97,5 +96,24 @@
     @include respond(phone) {
       display: block;
     }
+  }
+}
+
+.modal {
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+  opacity: 70%;
+  position: fixed;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &_photo {
+    height: 30rem;
+    width: 30rem;
+    background-color: red;
+    opacity: 100%;
   }
 }
