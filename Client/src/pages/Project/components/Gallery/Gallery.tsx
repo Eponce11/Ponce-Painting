@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import "./gallery.scss";
+import Test from "../../../../common/imgs/project-1.png";
+
 
 interface GalleryProps {
   gallery: {
@@ -29,7 +31,9 @@ const Gallery = (props: GalleryProps) => {
 
   const modal = (
     <div className="modal">
-      <div className="modal_photo" />
+      <div className="modal__photo-container">
+        <img src={Test} alt="" className="modal__photo" />
+      </div>
     </div>
   );
 
