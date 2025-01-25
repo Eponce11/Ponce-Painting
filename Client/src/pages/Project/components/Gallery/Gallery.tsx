@@ -1,7 +1,5 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import "./gallery.scss";
-import Test from "../../../../common/imgs/project-1.png";
-
 
 interface GalleryProps {
   gallery: {
@@ -21,19 +19,56 @@ const Gallery = (props: GalleryProps) => {
   const [pictureIdx, setPictureIdx] = useState<number>(0);
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
 
-  const handleResize = () => {
-    if (window.innerWidth > 900) setPictureIdx(0);
+  const openModal = (idx: number) => {
+    setPictureIdx(idx);
+    setIsModalOpen(true);
   };
 
-  useEffect(() => {
-    window.addEventListener("windowSize", handleResize);
-  }, []);
+  const closeModal = () => {
+    setIsModalOpen(false);
+    setPictureIdx(0);
+  };
+
+  const nextPhoto = () => {
+    setPictureIdx((idx) => {
+      if (idx === photos.length - 1) return 0;
+      return idx + 1;
+    });
+  };
+
+  const prevPhoto = () => {
+    setPictureIdx((idx) => {
+      if (idx === 0) return photos.length - 1;
+      return idx - 1;
+    });
+  };
 
   const modal = (
     <div className="modal">
       <div className="modal__photo-container">
-        <img src={Test} alt="" className="modal__photo" />
+        {photos.map((photo: any, idx: number) => {
+          return (
+            <div
+              className="modal__photo-wrapper"
+              style={{ translate: `${-100 * pictureIdx}%` }}
+            >
+              <img
+                key={idx}
+                src={photo.img}
+                alt={photo.alt}
+                className="modal__photo"
+              />
+            </div>
+          );
+        })}
       </div>
+
+      <div className="modal__previous" onClick={prevPhoto} />
+      <div className="modal__next" onClick={nextPhoto} />
+      <div className="modal__exit" onClick={closeModal} />
+      <span className="modal__photo-number">
+        {`${pictureIdx + 1} / ${photos.length}`}
+      </span>
     </div>
   );
 
@@ -48,12 +83,14 @@ const Gallery = (props: GalleryProps) => {
                 src={photo.img}
                 alt={photo.alt}
                 className={`gallery__photo gallery__photo--${idx + 1}`}
-                onClick={() => setIsModalOpen(true)}
+                onClick={() => openModal(idx)}
               />
             );
           })}
         </div>
-        <button className="gallery__btn">{button_txt}</button>
+        <button className="gallery__btn" onClick={() => openModal(0)}>
+          {button_txt}
+        </button>
       </div>
 
       {isModalOpen && modal}

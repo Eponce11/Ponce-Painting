@@ -53,6 +53,7 @@
     height: 100%;
     border-radius: 1rem;
     object-fit: cover;
+    cursor: pointer;
 
     &--4,
     &--5,
@@ -83,7 +84,6 @@
   }
 
   &__btn {
-    display: none;
     padding: 1.6rem 3.6rem;
     border: none;
     border-radius: 0.5rem;
@@ -92,30 +92,75 @@
     font-size: 1.6rem;
     font-weight: 500;
     justify-self: center;
-
-    @include respond(phone) {
-      display: block;
-    }
+    cursor: pointer;
   }
 }
 
 .modal {
   height: 100vh;
   width: 100vw;
-  background-color: black;
   background-color: rgba(0, 0, 0, 0.7);
   position: fixed;
   top: 0;
 
   &__photo-container {
+    display: flex;
     height: 100%;
     width: 100%;
-    display: flex;
-    justify-content: center;
     align-items: center;
   }
 
+  &__photo-wrapper {
+    min-width: 100%;
+    height: 80%;
+    transition: translate 250ms ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__photo-number {
+    position: absolute;
+    top: 5rem;
+    left: 5rem;
+  }
+
   &__photo {
+    width: 50%;
     height: 50%;
+  }
+
+  &__previous {
+    height: 3rem;
+    width: 3rem;
+    background-color: red;
+    z-index: 10;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    cursor: pointer;
+  }
+
+  &__next {
+    height: 3rem;
+    width: 3rem;
+    background-color: red;
+    z-index: 10;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateX(-50%);
+    cursor: pointer;
+  }
+
+  &__exit {
+    height: 3rem;
+    width: 3rem;
+    background-color: red;
+    z-index: 10;
+    position: absolute;
+    top: 5rem;
+    right: 5rem;
+    cursor: pointer;
   }
 }
