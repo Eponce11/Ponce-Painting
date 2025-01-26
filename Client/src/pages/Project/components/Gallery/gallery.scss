@@ -131,26 +131,47 @@
   }
 
   &__previous {
-    height: 3rem;
+    height: 6rem;
     width: 3rem;
-    background-color: red;
+    background-color: #ff8215;
+    border-radius: .3rem;
     z-index: 10;
     position: absolute;
     top: 50%;
-    left: 0;
+    left: 1rem;
     cursor: pointer;
+
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+
+    & > * {
+      margin-bottom: .5rem;
+    }
   }
 
   &__next {
-    height: 3rem;
+    height: 6rem;
     width: 3rem;
-    background-color: red;
+    background-color: #ff8215;
+    border-radius: .3rem;
     z-index: 10;
     position: absolute;
     top: 50%;
-    right: 0;
+    right: 1rem;
     transform: translateX(-50%);
     cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+
+    & > * {
+      margin-bottom: .5rem;
+    }
   }
 
   &__exit {

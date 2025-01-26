@@ -63,8 +63,12 @@ const Gallery = (props: GalleryProps) => {
         })}
       </div>
 
-      <div className="modal__previous" onClick={prevPhoto} />
-      <div className="modal__next" onClick={nextPhoto} />
+      <div className="modal__previous" onClick={prevPhoto}>
+        <span>&larr;</span>
+      </div>
+      <div className="modal__next" onClick={nextPhoto}>
+        <span>&rarr;</span>
+      </div>
       <div className="modal__exit" onClick={closeModal} />
       <span className="modal__photo-number">
         {`${pictureIdx + 1} / ${photos.length}`}
