@@ -1,6 +1,6 @@
 import "./contact.scss";
 import Test from "../../common/imgs/project-1.png";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 const Contact = () => {
   const [name, setName] = useState<string>("");
@@ -9,43 +9,71 @@ const Contact = () => {
   const [company, setCompany] = useState<string>();
   const [message, setMessage] = useState<string>("");
 
+  const [errors, setErrors] = useState<any>({
+    name: "",
+    email: "",
+    phone: "",
+    company: "",
+    message: "",
+    isValid: "",
+  });
+
   const formValidation = (data: any): boolean => {
-    const errors = {
+    const currentErrors = {
       name: "",
       email: "",
       phone: "",
       company: "",
       message: "",
+      isValid: true,
     };
 
-    let isValid = true;
-
     if (data.name.length < 1) {
-      errors.name = "Input Field Required";
+      currentErrors.name = "Input Field Required";
+      currentErrors.isValid = false;
     }
 
     // Need to add regex expression
     if (data.name.length < 1) {
-      errors.name = "Input Field Required";
+      currentErrors.name = "Input Field Required";
+      currentErrors.isValid = false;
     }
 
     // Phone Number
     if (data.name.length < 1) {
-      errors.name = "Input Field Required";
+      currentErrors.name = "Input Field Required";
+      currentErrors.isValid = false;
     }
 
     if (data.company.length < 1) {
-      errors.company = "Input Field Required";
+      currentErrors.company = "Input Field Required";
+      currentErrors.isValid = false;
     }
 
     if (data.message.length < 1) {
-      errors.message = "Input Field Required";
+      currentErrors.message = "Input Field Required";
+      currentErrors.isValid = false;
     }
 
-    return isValid;
+    setErrors(errors);
+
+    return currentErrors.isValid;
   };
 
-  const sendEmail = () => {};
+  const sendEmail = () => {
+    const data = {
+      name: name,
+      email: email,
+      phone: phone,
+      company: company,
+      message: message,
+    };
+
+    const isDataValid = formValidation(data);
+    if (!isDataValid) return;
+
+    // Send Email if Data is Valid
+  };
 
   return (
     <section className="contact" id="contact">
