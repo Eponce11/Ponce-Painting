@@ -2,23 +2,32 @@ import "./contact.scss";
 import Test from "../../common/imgs/project-1.png";
 import { useState } from "react";
 
+interface FormData {
+  name: string;
+  email: string;
+  phone: string;
+  company: string;
+  message: string;
+  isValid?: boolean;
+}
+
 const Contact = () => {
   const [name, setName] = useState<string>("");
   const [email, setEmail] = useState<string>("");
   const [phone, setPhone] = useState<string>("");
-  const [company, setCompany] = useState<string>();
+  const [company, setCompany] = useState<string>("");
   const [message, setMessage] = useState<string>("");
 
-  const [errors, setErrors] = useState<any>({
+  const [errors, setErrors] = useState<FormData>({
     name: "",
     email: "",
     phone: "",
     company: "",
     message: "",
-    isValid: "",
+    isValid: false,
   });
 
-  const formValidation = (data: any): boolean => {
+  const formValidation = (data: FormData): boolean => {
     const currentErrors = {
       name: "",
       email: "",
@@ -29,19 +38,19 @@ const Contact = () => {
     };
 
     if (data.name.length < 1) {
-      currentErrors.name = "Input Field Required";
+      currentErrors.name = " *Required";
       currentErrors.isValid = false;
     }
 
     // Need to add regex expression
     if (data.name.length < 1) {
-      currentErrors.name = "Input Field Required";
+      // currentErrors.name = "Input Field Required";
       currentErrors.isValid = false;
     }
 
     // Phone Number
     if (data.name.length < 1) {
-      currentErrors.name = "Input Field Required";
+      // currentErrors.name = "Input Field Required";
       currentErrors.isValid = false;
     }
 
@@ -55,13 +64,14 @@ const Contact = () => {
       currentErrors.isValid = false;
     }
 
-    setErrors(errors);
+    setErrors(currentErrors);
 
     return currentErrors.isValid;
   };
 
   const sendEmail = () => {
-    const data = {
+    console.log("Test");
+    const data: FormData = {
       name: name,
       email: email,
       phone: phone,
@@ -70,6 +80,7 @@ const Contact = () => {
     };
 
     const isDataValid = formValidation(data);
+    console.log(errors);
     if (!isDataValid) return;
 
     // Send Email if Data is Valid
@@ -83,6 +94,7 @@ const Contact = () => {
         <div className="form__pair--input">
           <label htmlFor="name" className="form__label">
             Name
+            {errors.name && <span className="form__error">{errors.name}</span>}
           </label>
           <input
             type="text"
@@ -139,7 +151,9 @@ const Contact = () => {
             onChange={(e) => setMessage(e.target.value)}
           ></textarea>
         </div>
-        <button className="form__btn">Get In Touch</button>
+        <span className="form__btn" onClick={sendEmail}>
+          Get In Touch
+        </span>
       </form>
     </section>
   );
