@@ -107,6 +107,9 @@ const Contact = () => {
         <div className="form__pair--input">
           <label htmlFor="name" className="form__label">
             Email
+            {errors.email && (
+              <span className="form__error">{errors.email}</span>
+            )}
           </label>
           <input
             type="text"
@@ -119,6 +122,9 @@ const Contact = () => {
         <div className="form__pair--input">
           <label htmlFor="name" className="form__label">
             Phone
+            {errors.phone && (
+              <span className="form__error">{errors.phone}</span>
+            )}
           </label>
           <input
             type="text"
@@ -131,6 +137,9 @@ const Contact = () => {
         <div className="form__pair--input">
           <label htmlFor="name" className="form__label">
             Company
+            {errors.company && (
+              <span className="form__error">{errors.company}</span>
+            )}
           </label>
           <input
             type="text"
@@ -143,6 +152,9 @@ const Contact = () => {
         <div className="form__pair--textarea">
           <label htmlFor="name" className="form__label">
             Message
+            {errors.message && (
+              <span className="form__error">{errors.message}</span>
+            )}
           </label>
           <textarea
             className="form__textarea"
