@@ -27,6 +27,11 @@ const Contact = () => {
     isValid: false,
   });
 
+  const validEmail = (data: string) => {
+    const expression: RegExp = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
+    return expression.test(data);
+  };
+
   const formValidation = (data: FormData): boolean => {
     const currentErrors = {
       name: "",
@@ -43,8 +48,11 @@ const Contact = () => {
     }
 
     // Need to add regex expression
-    if (data.name.length < 1) {
-      // currentErrors.name = "Input Field Required";
+    if (data.email.length < 1) {
+      currentErrors.email = " *Required";
+      currentErrors.isValid = false;
+    } else if (!validEmail(data.email)) {
+      currentErrors.email = " *Invalid";
       currentErrors.isValid = false;
     }
 
